@@ -24,5 +24,5 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
 
 const empty = [];
-assertEqual(tail(empty), empty);
-assertEqual(tail([458]), empty);
+assertEqual(tail(empty).length, 0);
+assertEqual(tail([458]).length, 0);
