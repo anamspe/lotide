@@ -10,17 +10,15 @@ const assertEqual = function (actual, expected) {
 };
 
 function head(array) {
-  value = array[0];
+const value = array[0];
   
-  if (array == []) {
+  if (array.length === 0) {
     return undefined;
-  } else if (!array[1]) {
-    return value;
-  }
+  } 
   return value;
 }
 
 assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]));
+assertEqual(head([]), undefined);
 assertEqual(head([90]), 90)
