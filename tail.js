@@ -11,11 +11,7 @@ const assertEqual = function(actual, expected) {
 
 const tail = function(array) {
   const value = array.slice(1);
-  let empty = [];
 
-  if (array.length < 2) {
-    return empty;
-  }
   return value;
 };
 
@@ -25,3 +21,8 @@ assertEqual(words.length, 3); // original array should still have 3 elements!
 assertEqual(result.length, 2); // ensure we get back two elements
 assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+
+
+const empty = [];
+assertEqual(tail(empty), empty);
+assertEqual(tail([458]), empty);
