@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   let positiveMessage = `✔✔ Assertion Passed: ${actual} === ${expected} ✔✔`;
   let negativeMessage = `🛑 Assertion Failed: ${actual} !== ${expected} 🛑`;
 
