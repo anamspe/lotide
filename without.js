@@ -24,12 +24,27 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const without = function(src, rmv) {
-  let newArr = src.filter(item => rmv.includes(item) === false);
-  // console.log("Source Array is:", src);
-  // console.log("Items to Remove Array is:", rmv);
-  // console.log("New Array is:", newArr);  
+  let newArr = [];
+  for (let i = 0; i < src.length; i++) {
+    if (!rmv.includes(src[i])) {
+      newArr.push(src[i]);
+    }
+  }
+  console.log("Source Array is:", src);
+  console.log("Items to Remove Array is:", rmv);
+  console.log("New Array is:", newArr);   
   return newArr;
-};
+}
+
+
+
+// const without = function(src, rmv) {
+//   let newArr = src.filter(item => rmv.includes(item) === false);
+//   // console.log("Source Array is:", src);
+//   // console.log("Items to Remove Array is:", rmv);
+//   // console.log("New Array is:", newArr);  
+//   return newArr;
+// };
 
 without([1, 2, 3], [1]) // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
