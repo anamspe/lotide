@@ -1,4 +1,4 @@
-function assertArraysEqual(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   let positiveMessage = `🤩 Assertion Passed! The arrays are equal! 🤩`;
   let negativeMessage = `😨 Assertion Failed! The arrays are different... 😨`;
 
