@@ -30,26 +30,16 @@ const without = function(src, rmv) {
       newArr.push(src[i]);
     }
   }
-  console.log("Source Array is:", src);
-  console.log("Items to Remove Array is:", rmv);
-  console.log("New Array is:", newArr);   
+  // console.log("Source Array is:", src);
+  // console.log("Items to Remove Array is:", rmv);
+  // console.log("New Array is:", newArr);   
   return newArr;
 }
 
 
-
-// const without = function(src, rmv) {
-//   let newArr = src.filter(item => rmv.includes(item) === false);
-//   // console.log("Source Array is:", src);
-//   // console.log("Items to Remove Array is:", rmv);
-//   // console.log("New Array is:", newArr);  
-//   return newArr;
-// };
-
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
-
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
+without(words, ["lighthouse"]); 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => should pass
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => should pass
