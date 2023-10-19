@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(string) {
   let count = {}
 
-  for (letter of string) {
+  for (let letter of string) {
     if (letter !== ' ') {
       if (count[letter]) {
       count[letter] += 1; 
