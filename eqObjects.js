@@ -42,7 +42,6 @@ const eqObjects = function(object1, object2) {
     // Check if keys in each object consist of Arrays
     // If they're arrays, call eqArrays to compare them
     if (Array.isArray(v1) && Array.isArray(v2)) {
-      eqArrays(v1, v2);
       // in case they're not equal, return return false
       if (!eqArrays(v1, v2)) {
         return false;
