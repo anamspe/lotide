@@ -9,28 +9,51 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  let key1 = "";
-  let key2 = "";
 
-  for (const key1 of keys1) {
-    key1;
+  // console.log(keys1, keys2);
+
+  //Comparing both array lengths to check if objects have same number of keys
+  if (keys1.length !== keys2.length) {
+    return false;
   }
 
-  for (const key2 of keys2) {
-    key2;
-  }
-
-  if (keys1.length === keys2.length) {
-    if (object1[key1] === object2[key2]) {
-      return true;
+  //loop in one of the objects to find keys
+  for (let key of keys1) {
+    let v1 = object1[key];
+    let v2 = object2[key];
+    // Check if keys in each object consist of Arrays
+    // If they're arrays, call eqArrays to compare them
+    if(Array.isArray(v1) && Array.isArray(v2)) {
+      eqArrays(v1, v2);
+      // in case they're equal, return true, else return false
+      if (eqArrays(v1, v2)) {
+        return true;
+      } return false;
+    } else {
+      if (v1 !== v2) {
+        return false;
+      }
     }
-  } return false;
-
+    return true;
+  }
 };
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
