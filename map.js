@@ -36,6 +36,6 @@ const map = function(array, callback) {
 // const results1 = map(words, word => word[0]);
 // console.log(results1);
 
-assertArraysEqual(map(['almond', 'beautiful', 'cruise'], word => word[0]), map(['avocado', 'bubblegum', 'cake'], word => word[0]));
-assertArraysEqual(map(['joy', 'fun', 'happy'], word => word[0]), map(['upset', 'bummed', 'sad'], word => word[0]));
-assertArraysEqual(map(['crocodile', 'flamingo', 'dog'], word => word[0]), map(['camel', 'fox', 'dinosaur'], word => word[0]))
+assertArraysEqual(map(['almond', 'beautiful', 'cruise'], word => word[0]), ['a', 'b', 'c']);
+assertArraysEqual(map(['joy', 'fun', 'happy'], word => word[0]), ['j', 'f', 'a']);
+assertArraysEqual(map(['camel', 'fox', 'dinosaur'], word => word[0]), ['c', 'f', 'd']);
