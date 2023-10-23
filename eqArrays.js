@@ -1,14 +1,3 @@
-const assertEqual = function(actual, expected) {
-  let positiveMessage = `✔✔ Assertion Passed: ${actual} === ${expected} ✔✔`;
-  let negativeMessage = `🛑 Assertion Failed: ${actual} !== ${expected} 🛑`;
-
-  if (actual === expected) {
-    console.log(positiveMessage);
-  } else {
-    console.log(negativeMessage);
-  }
-};
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -22,9 +11,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+module.exports = eqArrays
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+
 
