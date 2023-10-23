@@ -1,11 +1,11 @@
 const assertEqual = require('./assertEqual');
 
 const head = function(array) {
-  const value = array[0];
-
   if (array.length === 0) {
     return undefined;
   }
+
+  const value = array[0];
   return value;
 };
 
