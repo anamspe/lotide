@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ana_franco/lotide",
   "version": "1.0.0",
-  "description": "A clone of the lodash JavaScript library - made for pratice of creation of various types of functions using JS.",
+  "description": "A mini clone of the lodash library - made for learning purposes",
   "main": "assertEqual.js",
   "directories": {
     "test": "test"
