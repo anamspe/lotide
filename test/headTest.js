@@ -7,7 +7,7 @@ describe('#head', () => {
   });
   
   it("returns '90' for ['90']", () => {
-    assert.strictEqual(head([90]), 90);
+    assert.strictEqual(head(['90']), '90');
   });
   
   it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
