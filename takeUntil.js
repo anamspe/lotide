@@ -35,6 +35,7 @@ const takeUntil = function(array, callback) {
   return newArr;  
 };
 
+module.exports = takeUntil;
 
 console.log(takeUntil([24, 26, 27, 29, 32], x => x > 28))
 

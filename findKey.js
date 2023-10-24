@@ -18,6 +18,8 @@ const findKey = function(object, callback) {
   }
 };
 
+module.exports = findKey;
+
 assertEqual(findKey ({
   "The Rusty Spoon": { desserts: 4 },
   "Cafe Mocha": { desserts: 2 },

@@ -34,8 +34,9 @@ const without = function(src, rmv) {
   // console.log("Items to Remove Array is:", rmv);
   // console.log("New Array is:", newArr);   
   return newArr;
-}
+};
 
+module.exports = without;
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); 
