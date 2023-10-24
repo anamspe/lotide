@@ -63,3 +63,5 @@ assertObjectsEqual(
   {singer: 'Ed Sheeran', songs: ['Perfect', 'Dive', 'Lego House', 'Sing!']},
   {songs: ['Perfect', 'Dive', 'Lego House', 'Sing!'], singer: 'Ed Sheeran'}
 );
+
+module.exports = assertObjectsEqual;
